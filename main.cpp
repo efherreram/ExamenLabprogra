@@ -223,10 +223,10 @@ void victoryScreen(){
 void scoreScreen(){
     bool quit = false;
     std::ifstream read("puntos_max.txt");
-    int mayor;
-    read >> mayor;
+    int mayor, mayor2;
+    read >> mayor >> mayor2;
     std::stringstream SCORE;
-    SCORE << "RECORD: " << mayor;
+    SCORE << "1st: " << mayor << "     2nd: " << mayor2;
     puntos = TTF_RenderText_Solid(font, SCORE.str().c_str(), textColor);
     
     while(quit == false){
@@ -576,7 +576,8 @@ int main( int argc, char* args[] )
     }
     
     //Render the text
-
+    
+    
     menu();
     
     
